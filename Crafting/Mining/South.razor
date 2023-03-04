@@ -1,0 +1,16 @@
+while hp > 0
+    // Mine tile
+    dclicktype 3897 backpack
+    waitfortarget 
+    targetrelloc 0 0
+    clearsysmsg
+    waitforsysmsg 'no more ore' 120000
+    wait 750
+    
+    // Walk
+    walk 'South'
+    walk 'South'
+    
+    // Stack Ore
+    say '.stack_resources'
+endwhile
