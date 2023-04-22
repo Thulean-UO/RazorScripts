@@ -2,10 +2,9 @@
 // '.rip' so it works only
 // when morphed.
 
-if findtype 8198 true as 'corpse'
+while findtype 8198 true as 'corpse'
     target 'corpse'
     say '.rip'
-else
-    hotkey 'Target Self'
-    sysmsg 'No Corpse!' 33
-endif
+endwhile
+wait 300
+hotkey 'Target Self'

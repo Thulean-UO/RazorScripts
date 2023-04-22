@@ -2,16 +2,10 @@
 // your ripping weapon.
 //
 // Use slot '12'
-//
-// Do not hold the hotkey
-// you chosen, but press it
-// multiple times.
-//
 
-if findtype 8198 true as 'corpse'
+while findtype 8198 true as 'corpse'
     target 'corpse'
     say '.useitem 12'
-else
-    hotkey 'Target Self'
-    sysmsg 'No Corpse!' 33
-endif
+endwhile
+wait 300
+hotkey 'Target Self'
